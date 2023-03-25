@@ -3,7 +3,10 @@ import style from '../ImageGalerryItem/ImageGalerryItem.module.css';
 import PropTypes from 'prop-types';
 
 export default function ImageGalleryItem({ image, onImageClick }) {
-  const fullImage = () => onImageClick(image.largeImageURL);
+  // const fullImage = () => onImageClick(image.largeImageURL);
+  onImageClick = () => {
+    console.log(image.largeImageURL);
+  };
 
   return (
     <div>
@@ -12,7 +15,7 @@ export default function ImageGalleryItem({ image, onImageClick }) {
           src={image.webformatURL}
           alt={image.tags}
           className={style.ImageGalleryItemImage}
-          onClick={fullImage}
+          onClick={onImageClick}
         />
       </li>
     </div>
