@@ -33,7 +33,6 @@ class App extends Component {
       error: null,
     });
   };
-  // Получаем дату из фетча
   getImages = async () => {
     const { currentPage, searchQuery } = this.state;
     this.setState({
